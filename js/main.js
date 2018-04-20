@@ -134,12 +134,12 @@ $( document ).ready( function(){
     var body = document.querySelector('body');
     if (win === 3) {
       $( '#alert' ).css( 'display', 'block' );
-      $('#game__choice').click(false);
+      $('#game__choice .col').click(false);
       message.innerHTML = "You win 3 times ! Good job ! Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else if (lose === 3) {
       $( '#alert' ).css( 'display', 'block' );
-      $('#game__choice').click(false);
+      $('#game__choice .col').click(false);
       message.innerHTML = "You lost 3 times, the end. Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else {
@@ -154,7 +154,7 @@ $( document ).ready( function(){
     });
   }
   
-  $('.replay').click(function() {
+  $('.btn').click(function() {
     location.reload();
   });
 
