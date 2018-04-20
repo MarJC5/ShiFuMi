@@ -1,7 +1,6 @@
 $( document ).ready( function(){
-  var player;
-  var computer;
-  var message;
+  var player = "";
+  var computer = "";
   var win = 0;
   var lose = 0;
   var equality = 0;
@@ -131,13 +130,18 @@ $( document ).ready( function(){
 
   // Show a message if the player win or lose
   function score() {
+    var message = document.querySelector('.alert-message');
+    var body = document.querySelector('body');
     if (win === 3) {
-      alert("You win 3 times ! Good job !");
-      location.reload();
+      $( '#alert' ).css( 'display', 'block' );
+      message.innerHTML = "You win 3 times ! Good job ! Click for new game !";
+      body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else if (lose === 3) {
-      alert("You lose 3 times, the end.");
-      location.reload();
+      $( '#alert' ).css( 'display', 'block' );
+      message.innerHTML = "You lost 3 times, the end. Click for new game !";
+      body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else {
+      console.log('Error');
     }
   }
 
@@ -147,5 +151,10 @@ $( document ).ready( function(){
       $( '#game__match' ).css( 'display', 'flex' );
     });
   }
+  
+  $('#replay').click(function() {
+    location.reload();
+  });
 
 });
+
