@@ -152,7 +152,7 @@ $( document ).ready( function(){
     });
   }
   
-  $('#replay').click(function() {
+  $('.replay').click(function() {
     location.reload();
   });
 
