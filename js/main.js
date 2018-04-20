@@ -134,16 +134,12 @@ $( document ).ready( function(){
     var body = document.querySelector('body');
     if (win === 3) {
       $( '#alert' ).css( 'display', 'block' );
-      $('#scissor-col').click(function(){return false;});
-      $('#paper-col').click(function(){return false;});
-      $('#rock-col').click(function(){return false;});
+      $('#game__choice').css( 'display', 'none' );
       message.innerHTML = "You win 3 times ! Good job ! Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else if (lose === 3) {
       $( '#alert' ).css( 'display', 'block' );
-      $('#scissor-col').click(function(){return false;});
-      $('#paper-col').click(function(){return false;});
-      $('#rock-col').click(function(){return false;});
+      $('#game__choice').css( 'display', 'none' );
       message.innerHTML = "You lost 3 times, the end. Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else {
@@ -157,10 +153,10 @@ $( document ).ready( function(){
       $( '#game__match' ).css( 'display', 'flex' );
     });
   }
-  
+
+  // reload for new game
   $('.btn').click(function() {
     location.reload();
   });
 
 });
-
