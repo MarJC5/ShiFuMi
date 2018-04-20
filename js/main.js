@@ -135,11 +135,13 @@ $( document ).ready( function(){
     if (win === 3) {
       $( '#alert' ).css( 'display', 'block' );
       $('#game__choice').css( 'display', 'none' );
+      $('#score').css( 'display', 'none' );
       message.innerHTML = "You win 3 times ! Good job ! Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else if (lose === 3) {
       $( '#alert' ).css( 'display', 'block' );
       $('#game__choice').css( 'display', 'none' );
+      $('#score').css( 'display', 'none' );
       message.innerHTML = "You lost 3 times, the end. Click for new game !";
       body.style.backgroundColor = "rgba(22,22,22, 0.4)";
     } else {
