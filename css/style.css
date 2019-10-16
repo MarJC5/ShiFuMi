@@ -80,20 +80,18 @@ game choice -> Rock - Paper - Scissor
   height: 150px;
   margin-top: 5vh;
   margin-bottom: 20px;
-  background-color: rgba(22, 22, 22, .7);
 }
 
 #game__result {
   width: 100%;
   height: 100px;
   margin-bottom: 20px;
-  background-color: rgba(22, 22, 22, .7);
+  border: 1px solid;
 }
 
 #game__choice {
   width: 100%;
   height: 100px;
-  background-color: rgba(22, 22, 22, .7);
 }
 
 #game__choice, #game__result, #game__view {
